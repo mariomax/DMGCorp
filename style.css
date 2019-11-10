@@ -1,0 +1,34 @@
+/*
+Theme Name: DMG North Child
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme example child theme. Utilized by dmgn.com
+Author: Nick
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+
+.home-splash {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#site-header {
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .home-splash {
+    height: calc(100vh - 283px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-splash {
+    height: calc(100vh - 233px);
+  }
+}
