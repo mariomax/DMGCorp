@@ -10,25 +10,51 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+span.menu-text.hidden {
+  display: none;
+}
+
+li.home-link-image a span.icon-wrap img {
+  width: 110px;
+}
+
 .home-splash {
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
-#site-header {
+/* #site-header {
   background-color: rgba(0,0,0,0);
   position: absolute;
   top: 0;
-}
+} */
+
 
 @media screen and (min-width: 768px) {
+  .elementor-nav-menu--main li.home-link-image a {
+    padding: 12px 20px;
+  }
+
+  .elementor-nav-menu--main a {
+    padding: 13px 20px 8px;
+  }
+
+  li.home-link-image a span.icon-wrap img {
+    width: 80px;
+    padding: 0;
+  }
+
   .home-splash {
-    height: calc(100vh - 283px);
+    height: auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .home-splash {
-    height: calc(100vh - 233px);
+  .home-map .elementor-widget.elementor-widget-flip-box {
+    margin-bottom: 13px;
   }
+
+  /* .home-splash {
+    height: calc(100vh - 233px);
+  } */
 }
