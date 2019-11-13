@@ -18,10 +18,10 @@ li.home-link-image a span.icon-wrap img {
   width: 110px;
 }
 
-.home-splash {
+/* .home-splash {
   height: 80vh;
   overflow: hidden;
-}
+} */
 
 /* #site-header {
   background-color: rgba(0,0,0,0);
@@ -44,9 +44,9 @@ li.home-link-image a span.icon-wrap img {
     padding: 0;
   }
 
-  .home-splash {
+  /* .home-splash {
     height: auto;
-  }
+  } */
 }
 
 @media screen and (min-width: 1024px) {
