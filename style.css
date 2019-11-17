@@ -10,6 +10,36 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+
+#site-header {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.page-id-14 #site-header {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 85px;
+}
+
+/* Sticky Navigation */
+#sticky-navigation.elementor-sticky--effects {
+  background-color: #FFF;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+#sticky-main-nav.elementor-sticky--effects {
+  background-image: none;
+  background-color: #FFF;
+  -webkit-transition: all .3s ease;
+  padding: 0px 0px 10px;
+  transition: all .3s ease;
+}
+
+.elementor-nav-menu li.home-link-image {
+  display: none;
+}
+
 span.menu-text.hidden {
   display: none;
 }
@@ -18,19 +48,53 @@ li.home-link-image a span.icon-wrap img {
   width: 110px;
 }
 
+/* Page IDs (actually classes)
+  page-id-14 Home
+  page-id-16 Main
+  page-id-75 Locations
+    page-id-214 Hawaii 
+    page-id-216 Los Angeles         
+    page-id-218 San Diego
+    page-id-220 Santa Barbara
+    page-id-222 Central Valley
+    page-id-224 San Francisco
+    page-id-226 Sacramento
+    page-id-228 Reno, NV
+    page-id-231 San Jose 
+*/
+
+.page-id-214 #main #content-wrap {
+  padding-top: 14em;
+}
+
+/* Sidebar */
+#right-sidebar-inner .contact-info-widget.default i {
+  border: none;
+}
+
+#right-sidebar-inner ul.oceanwp-social-icons.style-simple li {
+  margin: 0 10px;
+}
+
 /* .home-splash {
   height: 80vh;
   overflow: hidden;
 } */
 
-/* #site-header {
-  background-color: rgba(0,0,0,0);
-  position: absolute;
-  top: 0;
-} */
-
+#footer-block {
+  background-color: #000;
+  background-image: linear-gradient(315deg, #000 0%, #343434 74%);
+}
 
 @media screen and (min-width: 768px) {
+  .page-id-14 #site-header {
+    top: 38px;
+  }
+
+  .elementor-nav-menu li.home-link-image {
+    display: block;
+  }
+
   .elementor-nav-menu--main li.home-link-image a {
     padding: 12px 20px;
   }
@@ -42,6 +106,15 @@ li.home-link-image a span.icon-wrap img {
   li.home-link-image a span.icon-wrap img {
     width: 80px;
     padding: 0;
+  }
+
+  /* Locations */
+  #sticky-main-nav.elementor-sticky--effects {
+    padding: 0px;
+  }
+
+  .page-id-214 #main #content-wrap {
+    padding-top: 17em;
   }
 
   /* .home-splash {
