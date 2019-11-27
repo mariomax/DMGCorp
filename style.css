@@ -63,11 +63,19 @@ li.home-link-image a span.icon-wrap img {
     page-id-231 San Jose 
 */
 
-/* .page-id-214 #main #content-wrap {
-  padding-top: 14em;
-} */
-
 /* Sidebar */
+/* Location */
+.page-id-214 #content-wrap,
+.page-id-216 #content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
 #right-sidebar-inner .contact-info-widget.default i {
   border: none;
 }
@@ -113,9 +121,15 @@ li.home-link-image a span.icon-wrap img {
     padding: 0px;
   }
 
-  /* .page-id-214 #main #content-wrap {
-    padding-top: 17em;
-  } */
+  .page-id-214 #content-wrap,
+  .page-id-216 #content-wrap {
+    display: block;
+  }
+
+  .page-id-214 aside#right-sidebar .widget_elementor-library,
+  .page-id-216 aside#right-sidebar .widget_elementor-library {
+    display: none;
+  }
 
   /* .home-splash {
     height: auto;
