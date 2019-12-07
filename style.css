@@ -10,6 +10,10 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+/* Top bar */
+.page-id-216 #top-bar {
+  display: none;
+}
 
 #site-header {
   background-color: rgba(255, 255, 255, 0);
