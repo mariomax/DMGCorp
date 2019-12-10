@@ -10,8 +10,29 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+/* Page IDs (actually classes)
+  page-id-14 Home
+  page-id-16 Main
+  page-id-75 Locations
+    page-id-214 Hawaii 
+    page-id-216 Los Angeles         
+    page-id-218 San Diego
+    page-id-537 San Diego 2
+    page-id-542 San Diego 3
+    page-id-220 Santa Barbara
+    page-id-222 Central Valley
+    page-id-224 San Francisco
+    page-id-226 Sacramento
+    page-id-228 Reno, NV
+    page-id-231 San Jose 
+*/
+
 /* Top bar */
-.page-id-216 #top-bar {
+.page-id-214 #top-bar,
+.page-id-216 #top-bar,
+.page-id-218 #top-bar,
+.page-id-537 #top-bar,
+.page-id-542 #top-bar {
   display: none;
 }
 
@@ -51,21 +72,6 @@ span.menu-text.hidden {
 li.home-link-image a span.icon-wrap img {
   width: 110px;
 }
-
-/* Page IDs (actually classes)
-  page-id-14 Home
-  page-id-16 Main
-  page-id-75 Locations
-    page-id-214 Hawaii 
-    page-id-216 Los Angeles         
-    page-id-218 San Diego
-    page-id-220 Santa Barbara
-    page-id-222 Central Valley
-    page-id-224 San Francisco
-    page-id-226 Sacramento
-    page-id-228 Reno, NV
-    page-id-231 San Jose 
-*/
 
 /* Sidebar - Location */
 .page-id-214 #content-wrap,
