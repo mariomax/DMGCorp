@@ -29,6 +29,7 @@ Version: 1.0
     page-id-226 Sacramento
     page-id-228 Reno, NV
     page-id-231 San Jose 
+  page-id-749 Side Nav 2
 */
 
 /* Top bar */
@@ -140,6 +141,12 @@ li.home-link-image a span.icon-wrap img {
   li.home-link-image a span.icon-wrap img {
     width: 80px;
     padding: 0;
+  }
+
+  /* Vertical nav */
+  ul#menu-1-dca015f a.highlighted + ul,
+  ul#menu-1-a72ae57 a.highlighted + ul {
+    width: 180px !important;
   }
 
   /* Locations */
