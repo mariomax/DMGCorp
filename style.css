@@ -10,6 +10,16 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+body {
+  font-family: roboto-slab, serif;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, nav ul li a {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+}
+
 /* Page IDs (actually classes)
   page-id-14 Home
   page-id-16 Main
