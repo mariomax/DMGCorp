@@ -9,6 +9,13 @@ Version: 1.0
 */
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
+:root {
+  --blue: #0C4A83;
+  --cyan: #3171AB;
+  --gray: #6D6D6D;
+  --lite: #F0F0F0;
+  --dark: #242424;
+}
 
 body {
   font-family: roboto-slab, serif;
@@ -91,6 +98,13 @@ span.menu-text.hidden {
 
 li.home-link-image a span.icon-wrap img {
   width: 110px;
+}
+
+/* Markets grid */
+#markets-grid .elementor-column-wrap .elementor-widget-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
 }
 
 /* Sidebar - Location */
@@ -193,6 +207,13 @@ li.home-link-image a span.icon-wrap img {
   /* .home-splash {
     height: auto;
   } */
+
+  /* Markets grid */
+  #markets-grid .elementor-column-wrap .elementor-widget-wrap {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+    row-gap: 1em;
+  }
 }
 
 @media screen and (min-width: 1024px) {
