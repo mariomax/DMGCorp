@@ -18,13 +18,17 @@ Version: 1.0
 }
 
 body {
-  font-family: roboto-slab, serif;
+  font-family: utopia-std, serif;
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, nav ul li a {
+h1, h2, h3, h4, h5, h6, nav ul li a, .elementor-button span {
   font-family: proxima-nova, sans-serif;
   font-style: normal;
+}
+
+nav ul li a {
+  font-weight: 500;
 }
 
 /* Page IDs (actually classes)
