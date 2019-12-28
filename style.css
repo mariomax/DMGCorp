@@ -51,11 +51,15 @@ nav ul li a {
     page-id-228 Reno, NV
     page-id-231 San Jose 
   page-id-749 Side Nav 2
+  page-id-492 Markets
+  page-id-826 Products
 */
 
 /* Top bar */
+.page-id-75 #top-bar,
 .page-id-214 #top-bar,
 .page-id-216 #top-bar,
+.page-id-220 #top-bar,
 .page-id-579 #top-bar,
 .page-id-583 #top-bar,
 .page-id-218 #top-bar,
@@ -63,7 +67,9 @@ nav ul li a {
 .page-id-542 #top-bar, 
 .page-id-224 #top-bar,
 .page-id-570 #top-bar,
-.page-id-575 #top-bar {
+.page-id-575 #top-bar,
+.page-id-492 #top-bar,
+.page-id-826 #top-bar {
   display: none;
 }
 
@@ -75,6 +81,10 @@ nav ul li a {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 85px;
+}
+
+.elementor-472 .elementor-element.elementor-element-778ab5f > .elementor-background-overlay {
+  opacity: .35;
 }
 
 /* Sticky Navigation */
@@ -92,6 +102,16 @@ nav ul li a {
   transition: all .3s ease;
 }
 
+.page-id-75 #sticky-main-nav.elementor-sticky--effects,
+.page-id-492 #sticky-main-nav.elementor-sticky--effects,
+.page-id-826 #sticky-main-nav.elementor-sticky--effects {
+  background-image: none;
+  background-color: var(--blue);
+  -webkit-transition: all .3s ease;
+  padding: 0px 0px 10px;
+  transition: all .3s ease;
+}
+
 .elementor-nav-menu li.home-link-image {
   display: none;
 }
@@ -104,6 +124,8 @@ li.home-link-image a span.icon-wrap img {
   width: 110px;
 }
 
+/* Locations popup triggered by "locations-nav" in CSS class in menu. REMOVED! */
+
 /* Markets grid */
 #markets-grid .elementor-column-wrap .elementor-widget-wrap {
   display: grid;
@@ -114,6 +136,7 @@ li.home-link-image a span.icon-wrap img {
 /* Sidebar - Location */
 .page-id-214 #content-wrap,
 .page-id-216 #content-wrap,
+.page-id-220 #content-wrap,
 .page-id-579 #content-wrap,
 .page-id-583 #content-wrap,
 .page-id-218 #content-wrap,
@@ -177,6 +200,14 @@ li.home-link-image a span.icon-wrap img {
     width: 180px !important;
   }
 
+  ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+    display: flex;
+  }
+
+  ul.sub-menu li.menu-item {
+    min-width: max-content;
+  }
+
   /* Locations */
   #sticky-main-nav.elementor-sticky--effects {
     padding: 0px;
@@ -184,6 +215,7 @@ li.home-link-image a span.icon-wrap img {
 
   .page-id-214 #content-wrap,
   .page-id-216 #content-wrap,
+  .page-id-220 #content-wrap,
   .page-id-579 #content-wrap,
   .page-id-583 #content-wrap,
   .page-id-218 #content-wrap,
@@ -197,6 +229,7 @@ li.home-link-image a span.icon-wrap img {
 
   .page-id-214 aside#right-sidebar .widget_elementor-library,
   .page-id-216 aside#right-sidebar .widget_elementor-library,
+  .page-id-220 aside#right-sidebar .widget_elementor-library,
   .page-id-579 aside#right-sidebar .widget_elementor-library,
   .page-id-583 aside#right-sidebar .widget_elementor-library,
   .page-id-218 aside#right-sidebar .widget_elementor-library,
@@ -207,10 +240,6 @@ li.home-link-image a span.icon-wrap img {
   .page-id-575 aside#right-sidebar .widget_elementor-library {
     display: none;
   }
-
-  /* .home-splash {
-    height: auto;
-  } */
 
   /* Markets grid */
   #markets-grid .elementor-column-wrap .elementor-widget-wrap {
@@ -224,8 +253,4 @@ li.home-link-image a span.icon-wrap img {
   .home-map .elementor-widget.elementor-widget-flip-box {
     margin-bottom: 13px;
   }
-
-  /* .home-splash {
-    height: calc(100vh - 233px);
-  } */
 }
