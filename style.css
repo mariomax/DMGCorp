@@ -22,17 +22,36 @@ body {
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, nav ul li a, .elementor-button span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav ul li a,
+.elementor-button span,
+#top-bar-content .topbar-content {
   font-family: proxima-nova, sans-serif;
   font-style: normal;
 }
 
 nav ul li a {
-  font-weight: 500;
+  font-weight: 600;
+}
+
+#right-sidebar-inner .sidebar-box ul li {
+  color: var(--dark); 
+  font-size: 16px;
+}
+
+#right-sidebar-inner .sidebar-box ul li .oceanwp-contact-title {
+  color: var(--blue);
+  font-family: proxima-nova;
+  font-size: 14px;
 }
 
 /* Page IDs (actually classes)
-  page-id-14 Home
+  page-id-472 Home
   page-id-16 Main
   page-id-75 Locations
     page-id-214 Hawaii 
@@ -53,6 +72,8 @@ nav ul li a {
   page-id-749 Side Nav 2
   page-id-492 Markets
   page-id-826 Products
+  page-id-863 Events
+  page-id-1001 Other Locations
 */
 
 /* Top bar */
@@ -64,26 +85,18 @@ nav ul li a {
 .page-id-583 #top-bar,
 .page-id-218 #top-bar,
 .page-id-537 #top-bar,
-.page-id-542 #top-bar, 
+.page-id-542 #top-bar,
 .page-id-224 #top-bar,
 .page-id-570 #top-bar,
 .page-id-575 #top-bar,
 .page-id-492 #top-bar,
-.page-id-826 #top-bar {
+.page-id-826 #top-bar,
+.page-id-863 #top-bar,
+.page-id-1001 #top-bar {
   display: none;
 }
 
-#site-header {
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.page-id-14 #site-header {
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 85px;
-}
-
-.elementor-472 .elementor-element.elementor-element-778ab5f > .elementor-background-overlay {
+.elementor-472 .elementor-element.elementor-element-778ab5f>.elementor-background-overlay {
   opacity: .35;
 }
 
@@ -104,9 +117,12 @@ nav ul li a {
 
 .page-id-75 #sticky-main-nav.elementor-sticky--effects,
 .page-id-492 #sticky-main-nav.elementor-sticky--effects,
-.page-id-826 #sticky-main-nav.elementor-sticky--effects {
-  background-image: none;
-  background-color: var(--blue);
+.page-id-826 #sticky-main-nav.elementor-sticky--effects,
+.page-id-863 #sticky-main-nav.elementor-sticky--effects,
+.page-id-1001 #sticky-main-nav.elementor-sticky--effects
+ {
+  background-color: #000;
+  background-image: linear-gradient(315deg, #000 0%, #343434 74%);
   -webkit-transition: all .3s ease;
   padding: 0px 0px 10px;
   transition: all .3s ease;
@@ -126,11 +142,17 @@ li.home-link-image a span.icon-wrap img {
 
 /* Locations popup triggered by "locations-nav" in CSS class in menu. REMOVED! */
 
-/* Markets grid */
-#markets-grid .elementor-column-wrap .elementor-widget-wrap {
+/* Page grids */
+#page-grid .elementor-column-wrap .elementor-widget-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1em;
   column-gap: 1em;
+}
+
+#location-grid .elementor-column-wrap .elementor-widget-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* Sidebar - Location */
@@ -150,8 +172,8 @@ li.home-link-image a span.icon-wrap img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 #right-sidebar-inner .contact-info-widget.default i {
@@ -162,19 +184,52 @@ li.home-link-image a span.icon-wrap img {
   margin: 0 10px;
 }
 
-/* .home-splash {
-  height: 80vh;
-  overflow: hidden;
-} */
-
 #footer-block {
   background-color: #000;
   background-image: linear-gradient(315deg, #000 0%, #343434 74%);
 }
 
 @media screen and (min-width: 768px) {
-  .page-id-14 #site-header {
-    top: 38px;
+  #sticky-main-nav.elementor-sticky--effects {
+    padding: 0px;
+  }
+  
+  .page-id-75 #sticky-main-nav.elementor-sticky--effects,
+  .page-id-492 #sticky-main-nav.elementor-sticky--effects,
+  .page-id-826 #sticky-main-nav.elementor-sticky--effects,
+  .page-id-1001 #sticky-main-nav.elementor-sticky--effects {
+    padding: 0px;
+  }
+
+  /* White icon used with white nav text */
+  .page-id-218 .home-icon,
+  .page-id-224 .home-icon,
+  .page-id-579 .home-icon,
+  .page-id-542 .home-icon,
+  .page-id-570 .home-icon,
+  .page-id-492 .home-icon,
+  .page-id-826 .home-icon,
+  .page-id-863 .home-icon,
+  .page-id-1001 .home-icon {
+    background-image: url(https://dmghvachvac.com/wp-content/uploads/2019/12/DMG-home-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 12px 12px 0 0 !important;
+    width: 80px;
+  }
+
+  .home-icon {
+    background-image: url(https://dmghvachvac.com/wp-content/uploads/2019/12/dmg-demo-logo-dark.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 12px 12px 0 0 !important;
+    width: 80px;
+  }
+
+  li.home-icon a.elementor-item,
+  li#menu-item-1000 a.menu-link {
+    font-size: 0;
+    color: transparent;
   }
 
   .elementor-nav-menu li.home-link-image {
@@ -195,16 +250,20 @@ li.home-link-image a span.icon-wrap img {
   }
 
   /* Vertical nav */
-  ul#menu-1-dca015f a.highlighted + ul,
-  ul#menu-1-a72ae57 a.highlighted + ul {
+  ul#menu-1-dca015f a.highlighted+ul,
+  ul#menu-1-a72ae57 a.highlighted+ul {
     width: 180px !important;
   }
 
-  ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   ul.sub-menu li.menu-item {
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
     min-width: max-content;
   }
 
@@ -241,16 +300,27 @@ li.home-link-image a span.icon-wrap img {
     display: none;
   }
 
-  /* Markets grid */
-  #markets-grid .elementor-column-wrap .elementor-widget-wrap {
+  /* Page grids */
+  #page-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+    row-gap: 1em;
+  }
+
+  #location-grid .elementor-column-wrap .elementor-widget-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 2em;
     column-gap: 2em;
     row-gap: 1em;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .home-map .elementor-widget.elementor-widget-flip-box {
-    margin-bottom: 13px;
+@media screen and (min-width: 1440px) {
+  #location-grid .elementor-column-wrap .elementor-widget-wrap {
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+    row-gap: 1em;
   }
 }
