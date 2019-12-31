@@ -18,6 +18,7 @@ Version: 1.0
 }
 
 body {
+  color: var(--dark);
   font-family: utopia-std, serif;
   font-style: normal;
 }
@@ -30,7 +31,9 @@ h5,
 h6,
 nav ul li a,
 .elementor-button span,
-#top-bar-content .topbar-content {
+#top-bar-content .topbar-content,
+a.recent-posts-title,
+input.submit {
   font-family: proxima-nova, sans-serif;
   font-style: normal;
 }
@@ -42,6 +45,13 @@ nav ul li a {
 #right-sidebar-inner .sidebar-box ul li {
   color: var(--dark); 
   font-size: 16px;
+}
+
+ul.meta,
+ul.meta li a,
+ul.meta li i,
+.oceanwp-recent-posts .recent-posts-info {
+  color: #6D6D6D;
 }
 
 #right-sidebar-inner .sidebar-box ul li .oceanwp-contact-title {
@@ -115,7 +125,9 @@ nav ul li a {
   transition: all .3s ease;
 }
 
+/* Dark background on sticky nav with white text */
 .page-id-75 #sticky-main-nav.elementor-sticky--effects,
+.page-id-218 #sticky-main-nav.elementor-sticky--effects,
 .page-id-492 #sticky-main-nav.elementor-sticky--effects,
 .page-id-826 #sticky-main-nav.elementor-sticky--effects,
 .page-id-863 #sticky-main-nav.elementor-sticky--effects,
@@ -255,7 +267,8 @@ li.home-link-image a span.icon-wrap img {
     width: 180px !important;
   }
 
-  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap,
+  .page-id-216 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
