@@ -47,6 +47,18 @@ nav ul li a {
   font-size: 16px;
 }
 
+#article-button.elementor-button {
+  background-color: #0C4A83;
+  color: #FFF;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#article-button.elementor-button:hover {
+  background-color: #3171AB;
+}
+
 ul.meta,
 ul.meta li a,
 ul.meta li i,
@@ -268,6 +280,7 @@ li.home-link-image a span.icon-wrap img {
   }
 
   .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap,
+  .page-id-218 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap,
   .page-id-216 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
     display: -webkit-box;
     display: -ms-flexbox;
