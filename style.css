@@ -10,7 +10,8 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 :root {
-  --blue: #0C4A83;
+  /* --blue: #0C4A83; */
+  --blue: #0F4C81;
   --cyan: #3171AB;
   --gray: #6D6D6D;
   --lite: #F0F0F0;
@@ -48,7 +49,7 @@ nav ul li a {
 }
 
 #article-button.elementor-button {
-  background-color: #0C4A83;
+  background-color: #0F4C81;
   color: #FFF;
   font-family: proxima-nova, sans-serif;
   font-weight: 600;
@@ -120,6 +121,10 @@ ul.meta li i,
 
 .elementor-472 .elementor-element.elementor-element-778ab5f>.elementor-background-overlay {
   opacity: .35;
+}
+
+.page-id-214 header#site-header {
+  display: none;
 }
 
 /* Sticky Navigation */
@@ -279,9 +284,7 @@ li.home-link-image a span.icon-wrap img {
     width: 180px !important;
   }
 
-  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap,
-  .page-id-218 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap,
-  .page-id-216 ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+  .vertical-nav ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,6 +342,11 @@ li.home-link-image a span.icon-wrap img {
     -webkit-column-gap: 2em;
     column-gap: 2em;
     row-gap: 1em;
+  }
+
+  .page-id-218 #main .elementor-background-overlay {
+    background-color: #000;
+    opacity: 0.5;
   }
 }
 
