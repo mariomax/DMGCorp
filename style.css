@@ -211,7 +211,7 @@ li.home-link-image a span.icon-wrap img {
 .market-box .elementor-cta .elementor-cta__content h2 {
   position: absolute;
   left: 0;
-  top: 15.2rem;
+  bottom: -27%;
 }
 
 /* Markets Portfolio */
@@ -228,7 +228,7 @@ li.home-link-image a span.icon-wrap img {
   color: #0F4C81;
   width: 100%;
   position: absolute;
-  top: 15rem;
+  bottom: -20%;
 }
 
 .elementor-gallery-item__title.elementor-animated-item--fade-in {
@@ -272,6 +272,12 @@ li.home-link-image a span.icon-wrap img {
 #footer-block {
   background-color: #000;
   background-image: linear-gradient(315deg, #000 0%, #343434 74%);
+}
+
+@media screen and (max-width: 768px) {
+  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown li {
+    background-color: #0F4C81;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -344,6 +350,23 @@ li.home-link-image a span.icon-wrap img {
     min-width: max-content;
   }
 
+  .vertical-nav .menu-item-792,
+  .vertical-nav .menu-item-831,
+  .vertical-nav a.has-submenu {
+    max-width: 30%;
+  }
+
+  .page-id-472 .vertical-nav a.highlighted+ul.sub-menu.elementor-nav-menu--dropdown {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown li {
+    background-color: transparent;
+  }
+
   /* Locations */
   #sticky-main-nav.elementor-sticky--effects {
     padding: 0px;
@@ -403,11 +426,7 @@ li.home-link-image a span.icon-wrap img {
 
   /* Markets */
   .market-box .elementor-cta .elementor-cta__content h2 {
-    top: 21rem;
-  }
-
-  .market-portfolio .elementor-gallery-item__title {
-    top: 17rem;
+    bottom: -22%;
   }
 
   .market-portfolio .e-gallery-grid:not(.e-gallery--animated) {
@@ -417,32 +436,36 @@ li.home-link-image a span.icon-wrap img {
 }
 
 @media screen and (min-width: 1024px) {
+  .vertical-nav .menu-item-792,
+  .vertical-nav .menu-item-831,
+  .vertical-nav a.has-submenu {
+    max-width: max-content;
+  }
+
   #location-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Markets */
-  .market-box .elementor-cta .elementor-cta__content h2 {
-    top: 25.5rem;
-  }
-
   .market-portfolio .elementor-gallery-item__title {
-    top: 22rem;
+    bottom: -15%;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  #vertical-nav-wrap > .elementor-column-wrap {
+    height: calc(100vh - 10%);
+  }
+
   #product-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .market-box .elementor-cta .elementor-cta__content {
     position: relative;
-    top: 0;
   }
 
   .market-portfolio .elementor-gallery-item__title {
-    top: 26rem;
+    bottom: -13%;
   }
 }
 
