@@ -79,7 +79,7 @@ ul.meta li i,
   font-size: 14px;
 }
 
-/* Page IDs (actually classes)
+/* Page "IDs" (as CSS class)
   page-id-472 Home
   page-id-16 Main
   page-id-75 Locations
@@ -108,28 +108,6 @@ ul.meta li i,
   page-id-1001 Other Locations
 */
 
-/* Top bar */
-.page-id-75 #top-bar,
-.page-id-199 #top-bar,
-.page-id-214 #top-bar,
-.page-id-216 #top-bar,
-.page-id-220 #top-bar,
-.page-id-579 #top-bar,
-.page-id-583 #top-bar,
-.page-id-218 #top-bar,
-.page-id-537 #top-bar,
-.page-id-542 #top-bar,
-.page-id-224 #top-bar,
-.page-id-570 #top-bar,
-.page-id-575 #top-bar,
-.page-id-492 #top-bar,
-.page-id-826 #top-bar,
-.page-id-853 #top-bar,
-.page-id-863 #top-bar,
-.page-id-1001 #top-bar {
-  display: none;
-}
-
 .elementor-472 .elementor-element.elementor-element-778ab5f>.elementor-background-overlay {
   opacity: .35;
 }
@@ -150,12 +128,7 @@ ul.meta li i,
 } */
 
 /* Dark background on sticky nav with white text */
-.page-id-75 #sticky-main-nav.elementor-sticky--effects,
-.page-id-218 #sticky-main-nav.elementor-sticky--effects,
-.page-id-492 #sticky-main-nav.elementor-sticky--effects,
-.page-id-826 #sticky-main-nav.elementor-sticky--effects,
-.page-id-863 #sticky-main-nav.elementor-sticky--effects,
-.page-id-1001 #sticky-main-nav.elementor-sticky--effects {
+#sticky-main-nav.elementor-sticky--effects {
   background-color: #000;
   background-image: linear-gradient(315deg, #000 0%, #343434 74%);
   -webkit-transition: all .3s ease;
@@ -174,8 +147,6 @@ span.menu-text.hidden {
 li.home-link-image a span.icon-wrap img {
   width: 110px;
 }
-
-/* Locations popup triggered by "locations-nav" in CSS class in menu. REMOVED! */
 
 /* Page grids */
 #page-grid .elementor-column-wrap .elementor-widget-wrap,
@@ -261,7 +232,8 @@ li.home-link-image a span.icon-wrap img {
   background-color: #F0F0F0;
   background-image:
     linear-gradient(to right, #7CA5BD 1px, transparent 1px),
-    linear-gradient(to bottom, #7CA5BD 1px, transparent 1px);}
+    linear-gradient(to bottom, #7CA5BD 1px, transparent 1px);
+}
 
 /* Sidebar - Location */
 .page-id-214 #content-wrap,
@@ -306,14 +278,6 @@ li.home-link-image a span.icon-wrap img {
 
 @media screen and (min-width: 768px) {
   #sticky-main-nav.elementor-sticky--effects {
-    padding: 0px;
-  }
-
-  .page-id-75 #sticky-main-nav.elementor-sticky--effects,
-  .page-id-492 #sticky-main-nav.elementor-sticky--effects,
-  .page-id-826 #sticky-main-nav.elementor-sticky--effects,
-  .page-id-863 #sticky-main-nav.elementor-sticky--effects,
-  .page-id-1001 #sticky-main-nav.elementor-sticky--effects {
     padding: 0px;
   }
 
@@ -380,9 +344,18 @@ li.home-link-image a span.icon-wrap img {
     max-width: 30%;
   }
 
+  /* Arrow to the right - vertical nav only */
+  .vertical-nav.elementor-nav-menu--indicator-classic .elementor-nav-menu .sub-arrow i:before {
+    content: "\f105" !important;
+  }
+
   /* .page-id-472  */
-  .page-id-472 #full-page-hero > .elementor-background-overlay {
+  .page-id-472 #full-page-hero>.elementor-background-overlay {
     opacity: .2;
+  }
+
+  #home-nav {
+    margin-bottom: 0;
   }
 
   .vertical-nav a.highlighted+ul.sub-menu.elementor-nav-menu--dropdown {
@@ -422,19 +395,8 @@ li.home-link-image a span.icon-wrap img {
     display: block;
   }
 
-  /* .page-id-579 aside#right-sidebar .widget_elementor-library, */
-  .page-id-214 aside#right-sidebar .widget_elementor-library,
-  .page-id-216 aside#right-sidebar .widget_elementor-library,
-  .page-id-220 aside#right-sidebar .widget_elementor-library,
-  .page-id-583 aside#right-sidebar .widget_elementor-library,
-  .page-id-218 aside#right-sidebar .widget_elementor-library,
-  .page-id-537 aside#right-sidebar .widget_elementor-library,
-  .page-id-542 aside#right-sidebar .widget_elementor-library,
-  .page-id-224 aside#right-sidebar .widget_elementor-library,
-  .page-id-570 aside#right-sidebar .widget_elementor-library,
-  .page-id-575 aside#right-sidebar .widget_elementor-library,
-  .page-id-579 aside#right-sidebar .widget_elementor-library,
-  .page-id-1748 aside#right-sidebar .widget_elementor-library {
+  /* Remove Office Intro (w ACF) */
+  aside#right-sidebar .widget_elementor-library {
     display: none;
   }
 
@@ -457,7 +419,7 @@ li.home-link-image a span.icon-wrap img {
   #product-grid .elementor-column-wrap .elementor-widget-wrap {
     row-gap: 2.5em;
   }
-  
+
   #page-grid .elementor-cta:hover .elementor-cta__bg-overlay,
   #product-grid .elementor-cta:hover .elementor-cta__bg-overlay,
   #location-product-grid .elementor-cta:hover .elementor-cta__bg-overlay,
@@ -470,11 +432,6 @@ li.home-link-image a span.icon-wrap img {
     -webkit-column-gap: 2em;
     column-gap: 2em;
     row-gap: 1em;
-  }
-
-  .page-id-218 #main .elementor-background-overlay {
-    background-color: #000;
-    opacity: 0.5;
   }
 
   /* Markets */
@@ -491,6 +448,11 @@ li.home-link-image a span.icon-wrap img {
 }
 
 @media screen and (min-width: 1024px) {
+  .elementor-nav-menu li.menu-item-has-children {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
   .vertical-nav .menu-item-792,
   .vertical-nav .menu-item-831,
@@ -513,6 +475,19 @@ li.home-link-image a span.icon-wrap img {
 @media screen and (min-width: 1200px) {
   #vertical-nav-wrap>.elementor-column-wrap {
     height: 100vh;
+  }
+
+  #vertical-nav-wrap .elementor-column-wrap>.elementor-widget-wrap {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #home-tiles {
+    margin-top: auto;
   }
 
   #product-grid .elementor-column-wrap .elementor-widget-wrap {
