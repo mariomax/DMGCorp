@@ -473,6 +473,11 @@ li.home-link-image a span.icon-wrap img {
 }
 
 @media screen and (min-width: 1200px) {
+  .vertical-nav ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
+    margin-top: 0 !important;
+  }
+  /* WHY!? */
+
   #vertical-nav-wrap>.elementor-column-wrap {
     height: 100vh;
   }
