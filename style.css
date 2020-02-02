@@ -233,6 +233,7 @@ li.home-link-image a span.icon-wrap img {
   background-image:
     linear-gradient(to right, #7CA5BD 1px, transparent 1px),
     linear-gradient(to bottom, #7CA5BD 1px, transparent 1px);
+  opacity: .5;
 }
 
 /* Sidebar - Location */
