@@ -12,11 +12,12 @@ Version: 1.0
 :root {
   /* --blue: #0C4A83; */
   --blue: #0F4C81;
-  --cyan: #3171AB;
+  --cyan: #367ABA;
   --gray: #6D6D6D;
   --lite: #F0F0F0;
   --grid: #7CA5BD;
   --dark: #242424;
+  --safe: #FF9900;
 }
 
 body {
@@ -55,22 +56,23 @@ nav ul li a {
 }
 
 #article-button.elementor-button {
-  background-color: #0F4C81;
-  color: #FFF;
+  background-color: var(--safe);
+  color: var(--dark);
   font-family: proxima-nova, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 #article-button.elementor-button:hover {
-  background-color: #3171AB;
+  background-color: var(--blue);
+  color: #FFF;
 }
 
 ul.meta,
 ul.meta li a,
 ul.meta li i,
 .oceanwp-recent-posts .recent-posts-info {
-  color: #6D6D6D;
+  color: var(--gray);
 }
 
 #right-sidebar-inner .sidebar-box ul li .oceanwp-contact-title {
@@ -113,30 +115,44 @@ ul.meta li i,
 }
 
 /* Sticky Navigation */
-/* #sticky-navigation.elementor-sticky--effects {
-  background-color: #FFF;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-#sticky-main-nav.elementor-sticky--effects {
-  background-image: none;
-  background-color: #FFF;
-  -webkit-transition: all .3s ease;
-  padding: 0px 0px 10px;
-  transition: all .3s ease;
-} */
-
-/* Dark background on sticky nav with white text */
-#sticky-main-nav.elementor-sticky--effects {
+#sticky-nav-section.elementor-sticky--effects {
   background-color: #000;
   background-image: linear-gradient(315deg, #000 0%, #343434 74%);
   -webkit-transition: all .3s ease;
-  padding: 0 0 1em;
+  padding: .5em 0;
   transition: all .3s ease;
 }
 
-.elementor-nav-menu li.home-link-image {
+#sticky-nav-section nav li {
+  text-shadow: 0 2px #000;
+}
+
+#sticky-nav-section nav.elementor-nav-menu--dropdown li {
+  text-shadow: none;
+}
+
+#hero-nav span.menu-text.hidden {
+  display: none;
+}
+
+#sticky-nav-section span.icon-wrap .hidden {
+  display: block;
+}
+
+#sticky-nav-section span.icon-wrap img {
+  display: none;
+}
+
+#hero-nav span.icon-wrap img {
+  height: 3rem;
+  width: auto;
+}
+
+#top-nav .elementor-nav-menu--dropdown ul {
+  height: calc(100vh - 40px);
+}
+
+/* .elementor-nav-menu li.home-link-image {
   display: none;
 }
 
@@ -146,7 +162,7 @@ span.menu-text.hidden {
 
 li.home-link-image a span.icon-wrap img {
   width: 110px;
-}
+} */
 
 /* Page grids */
 #page-grid .elementor-column-wrap .elementor-widget-wrap,
@@ -205,7 +221,7 @@ li.home-link-image a span.icon-wrap img {
 }
 
 .market-portfolio .elementor-gallery-item__title {
-  color: #0F4C81;
+  color: var(--blue);
   width: 100%;
   position: absolute;
   top: 102%;
@@ -229,11 +245,10 @@ li.home-link-image a span.icon-wrap img {
 /* Graph paper background */
 .graph-paper {
   background-size: 20px 20px;
-  background-color: #F0F0F0;
+  background-color: var(--lite);
   background-image:
-    linear-gradient(to right, #7CA5BD 1px, transparent 1px),
-    linear-gradient(to bottom, #7CA5BD 1px, transparent 1px);
-  opacity: .5;
+    linear-gradient(to right, rgba(124, 165, 189, .5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 165, 189, .5) 1px, transparent 1px);
 }
 
 /* Sidebar - Location */
@@ -273,17 +288,33 @@ li.home-link-image a span.icon-wrap img {
 
 @media screen and (max-width: 768px) {
   .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown li {
-    background-color: #0F4C81;
+    background-color: var(--blue);
   }
 }
 
 @media screen and (min-width: 768px) {
-  #sticky-main-nav.elementor-sticky--effects {
-    padding: 0px;
+  #sticky-nav-section.elementor-sticky--effects {
+    padding: .5em 0;
+  }
+
+  #hero-nav li.menu-item-home a {
+    padding: 7px 20px;
+  }
+
+  #sticky-nav-section li.menu-item-home a {
+    padding: 22px 32px;
+  }
+
+  #top-nav .elementor-nav-menu--dropdown ul {
+    height: auto;
+  }
+
+  #nav-home-logo img {
+    max-width: 150px;
   }
 
   /* White icon used with white nav text */
-  .home-icon {
+  /* .home-icon {
     background-image: url(https://dmghvachvac.com/wp-content/uploads/2019/11/dmg-footer-logo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -316,7 +347,7 @@ li.home-link-image a span.icon-wrap img {
   li.home-link-image a span.icon-wrap img {
     width: 80px;
     padding: 0;
-  }
+  } */
 
   /* Vertical nav */
   ul#menu-1-dca015f a.highlighted+ul,
@@ -449,7 +480,29 @@ li.home-link-image a span.icon-wrap img {
 }
 
 @media screen and (min-width: 1024px) {
-  .elementor-nav-menu li.menu-item-has-children {
+  /* Sticky navigation */
+  #sticky-nav-section.elementor-sticky--effects {
+    padding: 0;
+  }
+
+  #sticky-nav-section span.menu-text.hidden {
+    display: none;
+  }
+
+  #sticky-nav-section span.icon-wrap img {
+    display: block;
+  }
+
+  #sticky-nav-section li.menu-item-home a {
+    padding: 7px 20px;
+  }
+
+  #hero-nav span.icon-wrap img {
+    height: 3rem;
+    width: auto;
+  }
+
+  #home-nav .elementor-nav-menu li.menu-item-has-children {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
