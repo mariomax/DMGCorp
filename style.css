@@ -297,6 +297,8 @@ ul.meta li i,
   color: var(--grid);
 }
 
+/* ########## = TABLET = ########## ########## ########## ########## ########## ########## ########## ########## */
+/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
 @media screen and (max-width: 768px) {
   #vertical-nav-wrap nav.elementor-nav-menu--dropdown ul li.menu-item-has-children ul li a {
     padding-left: 20px;
@@ -370,6 +372,10 @@ ul.meta li i,
     opacity: .2;
   }
 
+  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown li {
+    background-color: transparent;
+  }
+
   #home-nav {
     margin-bottom: 0;
   }
@@ -382,10 +388,6 @@ ul.meta li i,
     -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .page-id-472 ul.sub-menu.elementor-nav-menu--dropdown li {
-    background-color: transparent;
   }
 
   /* Locations */
@@ -454,6 +456,8 @@ ul.meta li i,
   }
 }
 
+/* ########## = LAPTOP = ########## ########## ########## ########## ########## ########## ########## ########## */
+/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
 @media screen and (min-width: 1024px) {
   /* Sticky navigation */
   #sticky-nav-section.elementor-sticky--effects {
@@ -504,6 +508,8 @@ ul.meta li i,
   }
 }
 
+/* ########## = = LARGER LAPTOP = = ########## ########## ########## ########## ########## ########## ########## */
+/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
 @media screen and (min-width: 1200px) {
   #vertical-nav-wrap .elementor-column-wrap>.elementor-widget-wrap {
     align-content: flex-start;
@@ -516,6 +522,7 @@ ul.meta li i,
     margin-top: auto;
   }
 
+  #page-grid .elementor-column-wrap .elementor-widget-wrap,
   #product-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -538,6 +545,8 @@ ul.meta li i,
   }
 }
 
+/* ########## = = LARGE MONITOR = = ########## ########## ########## ########## ########## ########## ########## */
+/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
 @media screen and (min-width: 1440px) {
   #location-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(3, 1fr);
