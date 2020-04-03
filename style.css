@@ -1,7 +1,7 @@
 /*
-Theme Name: DMG North Child
+Theme Name: DMG Child
 Theme URI: https://oceanwp.org/
-Description: OceanWP WordPress theme example child theme. Utilized by dmgn.com
+Description: OceanWP WordPress theme example child theme. Utilized by dmghvac.com
 Author: Nick
 Author URI: https://oceanwp.org/
 Template: oceanwp
@@ -10,7 +10,6 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 :root {
-  /* --blue: #0C4A83; */
   --blue: #0F4C81;
   --cyan: #367ABA;
   --gray: #6D6D6D;
@@ -85,35 +84,20 @@ ul.meta li i,
 /* Remove unused page IDs before launch! */
 /* Page "IDs" (as CSS class)
   page-id-472 Home
-  page-id-16 Main
   page-id-75 Locations
     page-id-214 Hawaii 
-    page-id-216 Los Angeles
-    page-id-579 Los Angeles 2
-    page-id-583 Los Angeles 3
-    page-id-1748 Los Angeles 4       
+    page-id-216 Los Angeles      
     page-id-218 San Diego
-    page-id-537 San Diego 2
-    page-id-542 San Diego 3
-    page-id-224 San Francisco
-    page-id-570 San Francisco 2
-    page-id-575 San Francisco 3
-    page-id-220 Santa Barbara
+    page-id-220 Central Coast
     page-id-222 Central Valley
-    page-id-226 Sacramento
-    page-id-228 Reno, NV
-    page-id-231 San Jose 
+    page-id-226 Sacramento 
+    page-id-1001 Other Locations
   page-id-1963 Divisions
     page-id-1993 Parts
     page-id-1989 Service & Controls
     page-id-1985 Sharpe
-  page-id-749 Side Nav 2
   page-id-492 Markets
   page-id-826 Products
-  page-id-199 Careers
-  page-id-853 Classes
-  page-id-863 Events
-  page-id-1001 Other Locations
 */
 
 .elementor-472 .elementor-element.elementor-element-778ab5f>.elementor-background-overlay {
@@ -250,12 +234,6 @@ ul.meta li i,
 .page-id-220 #content-wrap,
 .page-id-222 #content-wrap,
 .page-id-224 #content-wrap,
-.page-id-537 #content-wrap,
-.page-id-542 #content-wrap,
-.page-id-570 #content-wrap,
-.page-id-575 #content-wrap,
-.page-id-579 #content-wrap,
-.page-id-583 #content-wrap,
 .page-id-1748 #content-wrap,
 .page-id-1985 #content-wrap,
 .page-id-1989 #content-wrap,
@@ -403,14 +381,8 @@ ul.meta li i,
   .page-id-216 #content-wrap,
   .page-id-220 #content-wrap,
   .page-id-222 #content-wrap,
-  .page-id-579 #content-wrap,
-  .page-id-583 #content-wrap,
   .page-id-218 #content-wrap,
-  .page-id-537 #content-wrap,
-  .page-id-542 #content-wrap,
   .page-id-224 #content-wrap,
-  .page-id-570 #content-wrap,
-  .page-id-575 #content-wrap,
   .page-id-1748 #content-wrap,
   .page-id-1993 #content-wrap,
   .page-id-1989 #content-wrap,
