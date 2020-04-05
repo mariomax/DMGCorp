@@ -278,8 +278,7 @@ ul.meta li i,
   color: var(--grid);
 }
 
-/* ########## = TABLET = ########## ########## ########## ########## ########## ########## ########## ########## */
-/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
+/* ########## TABLET ########## */
 @media screen and (max-width: 768px) {
   #vertical-nav-wrap nav.elementor-nav-menu--dropdown ul li.menu-item-has-children ul li a {
     padding-left: 20px;
@@ -434,8 +433,7 @@ ul.meta li i,
   }
 }
 
-/* ########## = LAPTOP = ########## ########## ########## ########## ########## ########## ########## ########## */
-/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
+/* ########## LAPTOP ########## */
 @media screen and (min-width: 1024px) {
   /* Sticky navigation */
   #sticky-nav-section.elementor-sticky--effects {
@@ -464,6 +462,10 @@ ul.meta li i,
     display: flex;
   }
 
+  #home-dmg {
+    margin-bottom: 10px;
+  }
+
   /* Keep submenu items aligned with top of parent */
   .vertical-nav ul.sub-menu.elementor-nav-menu--dropdown.sm-nowrap {
     margin-top: 0 !important;
@@ -487,14 +489,17 @@ ul.meta li i,
   }
 }
 
-/* ########## = = LARGER LAPTOP = = ########## ########## ########## ########## ########## ########## ########## */
-/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
+/* ########## LARGER LAPTOP ########## */
 @media screen and (min-width: 1200px) {
   #vertical-nav-wrap .elementor-column-wrap>.elementor-widget-wrap {
     align-content: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
+  }
+
+  #home-dmg {
+    margin-bottom: 20px;
   }
 
   #home-tiles {
@@ -518,15 +523,16 @@ ul.meta li i,
   }
 }
 
-@media screen and (min-height: 660px) {
-  #home-nav nav ul li {
+/* ########## LARGE MONITOR ########## */
+@media screen and (min-width: 1440px) {
+  #home-nav .elementor-widget-container nav ul li a {
     margin-bottom: 10px;
   }
-}
+  
+  .home-tile-title .elementor-widget-container {
+    padding: 2em 0em 2em 0em !important;
+  }
 
-/* ########## = = LARGE MONITOR = = ########## ########## ########## ########## ########## ########## ########## */
-/* ########## ########## ########## ########## ########## ########## ########## ########## ########## ########## */
-@media screen and (min-width: 1440px) {
   #location-grid .elementor-column-wrap .elementor-widget-wrap {
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-gap: 2em;
