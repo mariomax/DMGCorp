@@ -160,6 +160,16 @@ ul.meta li i,
   font-weight: 600;
 }
 
+.join-us-intro p a {
+  color: #fff;
+  font-style: italic;
+}
+
+.join-us-intro p a:hover {
+  color: #DDD;
+  text-decoration: underline;
+}
+
 /* Page grids */
 #page-grid .elementor-column-wrap .elementor-widget-wrap,
 #photo-grid .elementor-column-wrap .elementor-widget-wrap,
